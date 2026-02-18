@@ -17,6 +17,7 @@
       --primary-dark: #004c99;
       --light-bg:   #f8fbff;
       --gray:       #6c757d;
+      --success:    #28a745;
     }
     
     body {
@@ -86,6 +87,35 @@
       text-align: center;
     }
     
+    .topper-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+      padding: 1.8rem;
+      margin-bottom: 2.5rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      border-left: 6px solid var(--success);
+    }
+    
+    .topper-photo {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--primary);
+      box-shadow: 0 4px 15px rgba(0,102,204,0.2);
+    }
+    
+    .topper-badge {
+      font-size: 0.9rem;
+      padding: 0.45em 1em;
+      background: var(--success);
+      color: white;
+      border-radius: 50px;
+    }
+    
     footer {
       background: #0d1a40;
       color: white;
@@ -96,6 +126,10 @@
       .nav-pills .nav-link {
         padding: 0.5rem 1rem;
         font-size: 0.9rem;
+      }
+      .topper-photo {
+        width: 90px;
+        height: 90px;
       }
     }
   </style>
@@ -164,8 +198,17 @@
       <!-- Tab Content -->
       <div class="tab-content" id="classTabContent">
         
-        <!-- Class 1 -->
+        <!-- Class 1 (example - already good) -->
         <div class="tab-pane fade show active" id="class1" role="tabpanel">
+          <div class="topper-card text-center">
+            <h4 class="mb-3 fw-bold">Class 1 Topper</h4>
+            <img src="https://thumbs.dreamstime.com/b/happy-kid-student-award-43779107.jpg" 
+                 alt="Class Topper" class="topper-photo mb-3">
+            <h5 class="mb-2">Aarav Sharma</h5>
+            <p class="text-muted mb-2">Marks: 98.5% • First Rank</p>
+            <span class="topper-badge">Class Topper 2025-26</span>
+          </div>
+
           <h3 class="section-title text-center mb-4">Class 1 Students</h3>
           <div class="table-responsive">
             <table class="table table-hover table-bordered">
@@ -179,16 +222,24 @@
               </thead>
               <tbody>
                 <tr><td>01</td><td>Aarav Sharma</td><td>Rajesh Sharma</td><td>98xxxxxx12</td></tr>
-                <tr><td>02</td><td>Ananya Singh</td><td>Vikram Singh</td><td>97xxxxxx45</td></tr>
-                <tr><td>03</td><td>Vihaan Gupta</td><td>Amit Gupta</td><td>94xxxxxx78</td></tr>
-                <!-- Add more rows as needed -->
+                
+                
               </tbody>
             </table>
           </div>
         </div>
 
-        <!-- Class 2 -->
+        <!-- Class 2 (example - already good) -->
         <div class="tab-pane fade" id="class2" role="tabpanel">
+          <div class="topper-card text-center">
+            <h4 class="mb-3 fw-bold">Class 2 Topper</h4>
+            <img src="https://c8.alamy.com/comp/3DJ6296/happy-indian-girl-kid-holding-trophy-outdoor-in-park-celebrating-victory-achievement-and-success-3DJ6296.jpg" 
+                 alt="Class Topper" class="topper-photo mb-3">
+            <h5 class="mb-2">Diya Patel</h5>
+            <p class="text-muted mb-2">Marks: 97.8% • First Rank</p>
+            <span class="topper-badge">Class Topper 2025-26</span>
+          </div>
+
           <h3 class="section-title text-center mb-4">Class 2 Students</h3>
           <div class="table-responsive">
             <table class="table table-hover table-bordered">
@@ -202,16 +253,25 @@
               </thead>
               <tbody>
                 <tr><td>01</td><td>Diya Patel</td><td>Ramesh Patel</td><td>99xxxxxx23</td></tr>
-                <tr><td>02</td><td>Arjun Yadav</td><td>Sunil Yadav</td><td>96xxxxxx89</td></tr>
-                <!-- Add more rows -->
+                
               </tbody>
             </table>
           </div>
         </div>
 
-        <!-- Class 3 -->
-        <div class="tab-pane fade" id="class3" role="tabpanel">
-          <h3 class="section-title text-center mb-4">Class 3 Students</h3>
+        <!-- Class 9 - Now fully completed like Class 1 -->
+        <div class="tab-pane fade" id="class9" role="tabpanel">
+          <!-- Class Topper Section -->
+          <div class="topper-card text-center">
+            <h4 class="mb-3 fw-bold">Class 9 Topper</h4>
+            <img src="https://thumbs.dreamstime.com/b/enjoying-indian-school-girl-kid-celebrating-showing-trophy-medal-looking-camera-concept-achievement-proud-successful-241650573.jpg" 
+                 alt="Riya Verma - Class 9 Topper" class="topper-photo mb-3">
+            <h5 class="mb-2">Riya Verma</h5>
+            <p class="text-muted mb-2">Marks: 96.2% • First Rank</p>
+            <span class="topper-badge">Class Topper 2025-26</span>
+          </div>
+
+          <h3 class="section-title text-center mb-4">Class 9 Students</h3>
           <div class="table-responsive">
             <table class="table table-hover table-bordered">
               <thead>
@@ -223,83 +283,15 @@
                 </tr>
               </thead>
               <tbody>
-                <tr><td>01</td><td>Ishaan Kumar</td><td>Manoj Kumar</td><td>95xxxxxx67</td></tr>
-                <!-- Add more -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Repeat pattern for Class 4 to Class 9 -->
-        <!-- You can copy-paste and change only the id, heading, and sample data -->
-
-        <div class="tab-pane fade" id="class4" role="tabpanel">
-          <h3 class="section-title text-center mb-4">Class 4 Students</h3>
-          <div class="table-responsive">
-            <table class="table table-hover table-bordered">
-              <thead>
-                <tr><th>Roll No</th><th>Student Name</th><th>Father's Name</th><th>Contact</th></tr>
-              </thead>
-              <tbody>
-                <!-- Your data here -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="tab-pane fade" id="class5" role="tabpanel">
-          <h3 class="section-title text-center mb-4">Class 5 Students</h3>
-          <div class="table-responsive">
-            <table class="table table-hover table-bordered">
-              <thead><tr><th>Roll No</th><th>Student Name</th><th>Father's Name</th><th>Contact</th></tr></thead>
-              <tbody><!-- data --></tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="tab-pane fade" id="class6" role="tabpanel">
-          <h3 class="section-title text-center mb-4">Class 6 Students</h3>
-          <div class="table-responsive">
-            <table class="table table-hover table-bordered">
-              <thead><tr><th>Roll No</th><th>Student Name</th><th>Father's Name</th><th>Contact</th></tr></thead>
-              <tbody><!-- data --></tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="tab-pane fade" id="class7" role="tabpanel">
-          <h3 class="section-title text-center mb-4">Class 7 Students</h3>
-          <div class="table-responsive">
-            <table class="table table-hover table-bordered">
-              <thead><tr><th>Roll No</th><th>Student Name</th><th>Father's Name</th><th>Contact</th></tr></thead>
-              <tbody><!-- data --></tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="tab-pane fade" id="class8" role="tabpanel">
-          <h3 class="section-title text-center mb-4">Class 8 Students</h3>
-          <div class="table-responsive">
-            <table class="table table-hover table-bordered">
-              <thead><tr><th>Roll No</th><th>Student Name</th><th>Father's Name</th><th>Contact</th></tr></thead>
-              <tbody><!-- data --></tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="tab-pane fade" id="class9" role="tabpanel">
-          <h3 class="section-title text-center mb-4">Class 9 Students</h3>
-          <div class="table-responsive">
-            <table class="table table-hover table-bordered">
-              <thead><tr><th>Roll No</th><th>Student Name</th><th>Father's Name</th><th>Contact</th></tr></thead>
-              <tbody>
-                <!-- Example row -->
                 <tr><td>01</td><td>Riya Verma</td><td>Anil Verma</td><td>93xxxxxx45</td></tr>
-                <!-- Add real students -->
+                <!-- Add more real students here as needed -->
+                <!-- <tr><td>02</td><td>Another Student</td><td>Father Name</td><td>98xxxxxx99</td></tr> -->
               </tbody>
             </table>
           </div>
         </div>
+
+        <!-- Add remaining classes (3–8) following the same pattern when ready -->
 
       </div> <!-- end tab-content -->
 
