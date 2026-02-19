@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admission Form</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+.container {
+    width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 30px;
+    border: 2px solid #000;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.form-row {
+    margin-bottom: 12px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #000;
+}
+
+.photo-box {
+    width: 120px;
+    height: 140px;
+    border: 2px solid #000;
+    text-align: center;
+    line-height: 140px;
+    float: right;
+    margin-top: -160px;
+    font-size: 12px;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media print {
+    .buttons {
+        display: none;
+    }
+    body {
+        background: white;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h2>S.R.V International School</h2>
+<div class="subtitle">Admission Form 2026–27</div>
+
+<div class="photo-box" id="photoPreview">
+    Student Photo
+</div>
+
+<div class="form-row">
+    <label>Student Name:</label>
+    <input type="text">
+</div>
+
+<div class="form-row">
+    <label>Date of Birth:</label>
+    <input type="date">
+</div>
+
+<div class="form-row">
+    <label>Gender:</label>
+    <input type="text">
+</div>
+
+<div class="form-row">
+    <label>Class Applying For:</label>
+    <input type="text">
+</div>
+
+<div class="form-row">
+    <label>Father's Name:</label>
+    <input type="text">
+</div>
+
+<div class="form-row">
+    <label>Mother's Name:</label>
+    <input type="text">
+</div>
+
+<div class="form-row">
+    <label>Address:</label>
+    <input type="text">
+</div>
+
+<div class="form-row">
+    <label>Contact Number:</label>
+    <input type="text">
+</div>
+
+<div class="form-row">
+    <label>Email:</label>
+    <input type="email">
+</div>
+
+<div class="form-row">
+    <label>Upload Student Photo:</label>
+    <input type="file" accept="image/*" onchange="previewPhoto(event)">
+</div>
+
+<div class="buttons">
+    <button onclick="window.print()">Print Form</button>
+    <button onclick="downloadForm()">Download Form</button>
+</div>
+
+</div>
+
+<script>
+function previewPhoto(event) {
+    const reader = new FileReader();
+    reader.onload = function(){
+        const img = document.createElement("img");
+        img.src = reader.result;
+        img.style.width = "120px";
+        img.style.height = "140px";
+        img.style.objectFit = "cover";
+        const preview = document.getElementById("photoPreview");
+        preview.innerHTML = "";
+        preview.appendChild(img);
+    }
+    reader.readAsDataURL(event.target.files[0]);
+}
+
+function downloadForm() {
+    window.print();
+}
+</script>
+
+</body>
+</html>
